@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "state": "FL",
+    "region": "Gulf",
+    "version": 1,
+    "lastUpdated": null,
+    "disclaimer": "Not legal advice. Always confirm current limits with FWC before keeping any fish.",
+    "officialSource": "https://myfwc.com/fishing/saltwater/recreational/"
+  },
+  "species": [
+    {
+      "slug": "redsnapper",
+      "name": "Red Snapper",
+      "sci": "Lutjanus campechanus",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": null,
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "CONFIRM_WITH_FWC", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state+federal differ - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    },
+    {
+      "slug": "gaggrouper",
+      "name": "Gag Grouper",
+      "sci": "Mycteroperca microlepis",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": null,
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "CONFIRM_WITH_FWC", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state+federal differ - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    },
+    {
+      "slug": "redgrouper",
+      "name": "Red Grouper",
+      "sci": "Epinephelus morio",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": null,
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "CONFIRM_WITH_FWC", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state+federal differ - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    },
+    {
+      "slug": "redfish",
+      "name": "Red Drum (Redfish)",
+      "sci": "Sciaenops ocellatus",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": "CONFIRM_WITH_FWC",
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "year-round?", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    },
+    {
+      "slug": "seatrout",
+      "name": "Spotted Seatrout",
+      "sci": "Cynoscion nebulosus",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": "CONFIRM_WITH_FWC",
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "CONFIRM_WITH_FWC", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    },
+    {
+      "slug": "cobia",
+      "name": "Cobia",
+      "sci": "Rachycentron canadum",
+      "minSizeInches": "CONFIRM_WITH_FWC",
+      "maxSizeInches": null,
+      "bagLimit": "CONFIRM_WITH_FWC",
+      "season": { "open": "CONFIRM_WITH_FWC", "close": "CONFIRM_WITH_FWC" },
+      "openNow": null,
+      "waters": "state+federal - CONFIRM_WITH_FWC",
+      "lastVerified": null
+    }
+  ]
+}
