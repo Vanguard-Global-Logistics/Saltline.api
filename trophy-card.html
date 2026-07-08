@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SALTLINE — Trophy Card</title>
+<style>
+  /* ============================================================
+     SALTLINE Trophy Card  —  PURE HTML + CSS, ZERO JAVASCRIPT
+     Renders in any viewer, including iOS Files / Quick Look
+     which block <script>. Nothing here needs JS to work.
+     ============================================================ */
+
+  :root{
+    --ink:#0b1622;          /* deep charcoal-navy   */
+    --ink2:#132638;         /* card gradient bottom */
+    --steel:#8fb3d9;        /* muted steel blue     */
+    --gold:#d9b45a;         /* trophy gold accent   */
+    --gold-2:#f0d488;
+    --line:rgba(143,179,217,.22);
+    --paper:#eaf1f8;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{
+    min-height:100%;
+    background:
+      radial-gradient(120% 90% at 50% -10%, #16324b 0%, #0a1420 55%, #060d15 100%);
+    color:var(--paper);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px 16px;
+  }
+
+  /* ---- The card ------------------------------------------------ */
+  .card{
+    width:100%;
+    max-width:380px;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--ink2) 100%);
+    border:1px solid var(--line);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.06) inset,
+      0 24px 60px -20px rgba(0,0,0,.7);
+    position:relative;
+  }
+
+  /* Gold hairline frame just inside the edge */
+  .card::after{
+    content:"";
+    position:absolute; inset:8px;
+    border:1px solid rgba(217,180,90,.35);
+    border-radius:15px;
+    pointer-events:none;
+  }
+
+  /* ---- Header -------------------------------------------------- */
+  .head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 20px 12px;
+  }
+  .brand{
+    font-size:12px; letter-spacing:.32em; font-weight:700;
+    color:var(--gold-2);
+    text-transform:uppercase;
+  }
+  .rank{
+    font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink);
+    background:linear-gradient(180deg,var(--gold-2),var(--gold));
+    padding:4px 9px; border-radius:999px; font-weight:800;
+  }
+
+  /* ---- Fish frame --------------------------------------------- */
+  .frame{
+    position:relative;
+    margin:2px 16px 0;
+    aspect-ratio:3 / 2;
+    border-radius:12px;
+    overflow:hidden;
+    /* CSS placeholder shows through if the .jpg isn't present —
+       no JS onerror needed. */
+    background:
+      radial-gradient(90% 120% at 30% 20%, #24425f 0%, #12283b 55%, #0a1826 100%);
+    border:1px solid var(--line);
+  }
+  .frame img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover; display:block;
+  }
+  /* faint watermark visible only when no image loads */
+  .frame .ghost{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    color:rgba(143,179,217,.30);
+    font-size:13px; letter-spacing:.22em; text-transform:uppercase;
+  }
+
+  /* ---- Species title ------------------------------------------ */
+  .title{ padding:16px 20px 4px; }
+  .common{
+    font-size:26px; font-weight:800; line-height:1.05;
+    letter-spacing:.01em;
+  }
+  .sci{
+    font-size:13px; font-style:italic; color:var(--steel);
+    margin-top:3px;
+  }
+
+  /* ---- Stat grid ---------------------------------------------- */
+  .stats{
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    margin:14px 16px 0;
+    border:1px solid var(--line);
+    border-radius:12px; overflow:hidden;
+  }
+  .stat{ background:linear-gradient(180deg,#0e1e2e,#0b1725); padding:11px 14px; }
+  .stat .k{
+    font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--steel); opacity:.85;
+  }
+  .stat .v{ font-size:17px; font-weight:700; margin-top:3px; }
+
+  /* ---- Footer ------------------------------------------------- */
+  .foot{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 20px 18px;
+    font-size:11px; color:var(--steel);
+  }
+  .foot .angler{ color:var(--paper); font-weight:600; }
+  .dot{ color:var(--gold); padding:0 6px; }
+</style>
+</head>
+<body>
+
+  <!-- Duplicate this whole <article> per fish. Swap the text and the
+       img src (matches your existing filenames: pompano.jpg, wahoo.jpg …). -->
+  <article class="card">
+
+    <header class="head">
+      <span class="brand">Saltline&nbsp;·&nbsp;Trophy</span>
+      <span class="rank">Personal Best</span>
+    </header>
+
+    <div class="frame">
+      <div class="ghost">Saltline</div>
+      <img src="pompano.jpg" alt="Florida Pompano">
+    </div>
+
+    <div class="title">
+      <div class="common">Florida Pompano</div>
+      <div class="sci">Trachinotus carolinus</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Weight</div><div class="v">4 lb 6 oz</div></div>
+      <div class="stat"><div class="k">Length</div><div class="v">21 in</div></div>
+      <div class="stat"><div class="k">Water</div><div class="v">Gulf · Surf</div></div>
+      <div class="stat"><div class="k">Bait</div><div class="v">Sand flea</div></div>
+    </div>
+
+    <footer class="foot">
+      <span class="angler">Landed by You</span>
+      <span><span class="dot">•</span>Jul&nbsp;2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
